@@ -4,4 +4,4 @@
 *.vcxproject.filters
 
 # the big boi lib file
-*.iph
+*.ipch
