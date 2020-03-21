@@ -22,6 +22,6 @@ Project for adding radial macro menu when holding down left click on mouse.
 	- Many-Time-Pad Encryption Cracking
 		- see above challenge
 	- Google-Ping-Script
-		Script to open a cmd window and continously ping google as a joke to hacking movies where text just rolls down a cmd window endlessly.
+		- Script to open a cmd window and continously ping google as a joke to hacking movies where text just rolls down a cmd window endlessly.
 	- Other IT Problems here
 		- 
