@@ -1,0 +1,7 @@
+# ignore certain project file types
+
+*.vcxproject
+*.vcxproject.filters
+
+# the big boi lib file
+*.iph
