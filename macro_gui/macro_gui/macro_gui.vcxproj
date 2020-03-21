@@ -19,10 +19,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="gui_main.cpp" />
+    <ClCompile Include="cApp.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="gui_main.h" />
+    <ClInclude Include="cApp.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
