@@ -25,3 +25,31 @@ Project for adding radial macro menu when holding down left click on mouse.
 		- Script to open a cmd window and continously ping google as a joke to hacking movies where text just rolls down a cmd window endlessly.
 	- Other IT Problems here
 		- 
+
+- Application Hierarchy
+	- int main
+		enum events
+		{
+			0 = val_convert;
+			1 = image_metadata;
+		};
+	
+		events event;
+		gui_main.begin(minimized)
+		on_event(hotkey.pressed == true)
+		{
+			gui_main.window(true)
+			while(gui_main.event.flag == false);
+			event = gui_main.event_get;
+			case(event)
+			{
+				case val_convert:
+					gui_main.return.args = val_convert(gui_main.event.args);
+					gui_main.return.flag = true;
+				case image_metadata:
+					main.run(image_metadata.py);
+			}
+			
+		}
+		
+		
