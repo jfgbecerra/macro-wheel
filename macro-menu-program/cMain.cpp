@@ -49,11 +49,11 @@ void cMain::OnButtonClicked(wxCommandEvent& evt)
 	switch(j * nFieldWidth + i)
 	{
 		case 0:	// case for the value converter
-
+			value_converter();
 			break;
 
 		case 7: // case for the distraction window hacker
-
+			system("hack_distract.bat");
 			break;
 
 		case 8:	// case for the exit button

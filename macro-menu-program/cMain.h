@@ -1,5 +1,6 @@
 #pragma once
 #include "wx/wx.h"
+#include "macro_functions/value_converter.h"
 
 class cMain : public wxFrame
 {

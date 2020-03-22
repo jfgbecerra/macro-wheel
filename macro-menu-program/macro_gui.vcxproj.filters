@@ -16,6 +16,9 @@
     <Filter Include="Function Files">
       <UniqueIdentifier>{04c8cb3d-388d-4a7a-8d7d-c212ba66fef3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Function Header Files">
+      <UniqueIdentifier>{055c8f3f-6a52-48b3-b870-7c37fa0d4ce6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="cApp.cpp">
@@ -24,6 +27,9 @@
     <ClCompile Include="cMain.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="macro_functions\value_converter.cpp">
+      <Filter>Function Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="cApp.h">
@@ -31,6 +37,9 @@
     </ClInclude>
     <ClInclude Include="cMain.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="macro_functions\value_converter.h">
+      <Filter>Function Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
