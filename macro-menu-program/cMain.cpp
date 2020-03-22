@@ -50,6 +50,7 @@ void cMain::OnButtonClicked(wxCommandEvent& evt)
 	{
 		case 0:	// case for the value converter
 			value_converter();
+			system("pause");
 			break;
 
 		case 7: // case for the distraction window hacker

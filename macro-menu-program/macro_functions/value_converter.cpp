@@ -5,6 +5,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <unordered_map> 
+#include <string>
 #include "value_converter.h" 
 
 using namespace std;
@@ -127,13 +128,13 @@ void value_converter()
     else if(choice == "2") {
         cout << "Enter the integer: ";
         cin >> i;
-        itoa(i, buffer, 2);
+        _itoa_s(i, buffer, 2);
         cout << "Hex value is: " << buffer << endl;
     }
     else if (choice == "3") {
         cout << "Enter the integer: ";
         cin >> i;
-        itoa(i, buffer, 16);
+        _itoa_s(i, buffer, 16);
         cout << "Hex value is: " << buffer << endl;
     }
     else if (choice == "4") {
