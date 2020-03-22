@@ -4,3 +4,5 @@ C:\Users\Coleman Cook\Documents\macro-wheel\macro-menu-program\macro_gui\Debug\m
 C:\Users\Coleman Cook\Documents\macro-wheel\macro-menu-program\macro_gui\Debug\macro_gui.pdb
 C:\Users\Coleman Cook\Documents\macro-wheel\macro-menu-program\Debug\macro_gui.exe
 C:\Users\Coleman Cook\Documents\macro-wheel\macro-menu-program\Debug\macro_gui.pdb
+C:\Users\Coleman Cook\Documents\macro-wheel\macro-menu-program\Debug\macro_gui.vcxproj.CopyComplete
+C:\Users\Coleman Cook\Documents\macro-wheel\macro-menu-program\Debug\tinyxml2d.dll

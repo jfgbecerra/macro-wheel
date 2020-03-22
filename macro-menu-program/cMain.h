@@ -7,6 +7,7 @@
 #include "macro_functions/value_converter.h"
 
 
+
 class cMain : public wxFrame
 {
 public:
