@@ -10,6 +10,8 @@
 #include <iomanip>  // std::setprecision
 
 
+using namespace std;
+
 wxBEGIN_EVENT_TABLE(cMain, wxFrame)
 
 	EVT_HOTKEY(20001, HotKeyDown)
@@ -61,6 +63,10 @@ cMain::cMain() : wxFrame(nullptr, wxID_ANY, "The Hackro", wxPoint(30, 30) , wxSi
 	// *** Button labels are set here ***
 	btn[0]->SetLabel("Value Conversion Hacker");
 	btn[1]->SetLabel("Image Metadata Hacker");
+	btn[2]->SetLabel("Hack me to Tonga Time");
+	btn[3]->SetLabel("Hack me to Alabama");
+	btn[4]->SetLabel("Hack me a zip file");
+	btn[5]->SetLabel("Multi-Pad Encryption Hacking");
 	btn[7]->SetLabel("Distraction Window Hacker");
 	btn[8]->SetLabel("Exit Hacker");
 
@@ -85,6 +91,8 @@ void cMain::OnButtonClicked(wxCommandEvent& evt)
 	std::string outStr;
 
 	EXIFStreamFile stream();
+
+	//crib_drag_data my_crib_data;
 	
 	int i = (evt.GetId() - 10000) % nFieldWidth;
 	int j = (evt.GetId() - 10000) / nFieldWidth;
@@ -111,10 +119,37 @@ void cMain::OnButtonClicked(wxCommandEvent& evt)
 
 			break;
 
-		case 1:
-			// case for image metadata hacker
-
+		case 2:
+			// case for hacking to hawaii
+			system("tzutil /s \"Tonga Standard Time\"");
+			wxMessageBox("It's Tonga Time");
 			break;
+
+		case 3:
+			system("tzutil /s \"Central Standard Time\"");
+			wxMessageBox("Yee Haw Time");
+			break;
+
+		//case 5:
+
+		//	wxMessageBox("Crib dragging process activated. To end the process, enter 'end'.");
+		//	my_crib_data.cipher_1 = wxGetTextFromUser(_("Enter the first cipher you wish to compare"), _("Crib Drag Hacker"), _(""), this, -1, -1, true);
+		//	my_crib_data.cipher_2 = wxGetTextFromUser(_("Enter the second cipher you wish to compare"), _("Crib Drag Hacker"), _(""), this, -1, -1, true);
+		//	my_crib_data.crib = wxGetTextFromUser(_("Enter the value you wish to use as a crib"), _("Crib Drag Hacker"), _(""), this, -1, -1, true);
+
+		//	while (strcmp(wx_inputStr_1.c_str(), "end") != 0)
+		//	{
+		//		my_crib_data = cribdrag(my_crib_data);
+		//		wx_inputStr_2 << my_crib_data.results[0];
+
+		//		wxMessageBox("Your current crib results are: \n" + wx_inputStr_2);
+		//		
+		//		wx_inputStr_1 = wxGetTextFromUser(_("Enter a new crib value or enter 'end'"), _("Crib Drag Hacker"), _(""), this, -1, -1, true);
+		//		my_crib_data.crib = wx_inputStr_1;
+		//	}
+
+		//	wxMessageBox("Crib dragging process ended.");
+		//	break;
 
 		case 7: // case for the distraction window hacker
 			system("hack_distract.bat");
@@ -197,6 +232,13 @@ void cMain::OnButtonClicked(wxCommandEvent& evt)
 				wxMessageBox(wx_inputStr_2);
 			}
 		}
+	}else if((j * nFieldWidth + i) == 4)
+	{
+		wx_inputStr_1 = wxGetTextFromUser(_("Enter the file path of archive you would like to dictionary attack."), _("Dictionary Attack Hacker"), _(""), this, -1, -1, true);
+		inputStr_1 = wx_inputStr_1.mb_str();
+		inputStr_2 = password_cracker(inputStr_1);
+		wx_inputStr_3 << "Your Password is: " << inputStr_2;
+		wxMessageBox(wx_inputStr_3);
 	}
 
 	this->Hide();

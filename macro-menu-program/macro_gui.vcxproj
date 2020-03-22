@@ -24,6 +24,7 @@
     <ClCompile Include="cMain.cpp" />
     <ClCompile Include="dependencies\TinyEXIF-master\TinyEXIF.cpp" />
     <ClCompile Include="get_image_metadata.cpp" />
+    <ClCompile Include="macro_functions\password_cracker.cpp" />
     <ClCompile Include="macro_functions\value_converter.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -32,8 +33,23 @@
     <ClInclude Include="cMain.h" />
     <ClInclude Include="dependencies\TinyEXIF-master\TinyEXIF.h" />
     <ClInclude Include="get_image_metadata.h" />
+    <ClInclude Include="macro_functions\password_cracker.h" />
     <ClInclude Include="macro_functions\value_converter.h" />
     <ClInclude Include="resource1.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="macro_functions\wbenny-ziplib-176e4b6d51fc\Source\ZipLib\extlibs\bzip2\bzip2.vcxproj">
+      <Project>{dbbf348d-c221-4f2e-8a0d-24efa0d98e71}</Project>
+    </ProjectReference>
+    <ProjectReference Include="macro_functions\wbenny-ziplib-176e4b6d51fc\Source\ZipLib\extlibs\lzma\lzma.vcxproj">
+      <Project>{7ead1358-3e72-4fb6-a212-25d462b5c1e9}</Project>
+    </ProjectReference>
+    <ProjectReference Include="macro_functions\wbenny-ziplib-176e4b6d51fc\Source\ZipLib\extlibs\zlib\zlib.vcxproj">
+      <Project>{baeb16b3-db4c-432f-9e6a-2acadea0691d}</Project>
+    </ProjectReference>
+    <ProjectReference Include="macro_functions\wbenny-ziplib-176e4b6d51fc\Source\ZipLib\ZipLib.vcxproj">
+      <Project>{5c9fd859-ddf9-4510-8397-b329b0ae8c48}</Project>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
@@ -107,12 +123,12 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(WXWIN)\include;\dependencies;$(WXWIN)\include\msvc</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(WXWIN)\include;\dependencies;$(WXWIN)\include\msvc;\macro_functions\wbenny-ziplib-176e4b6d51fc\Source\ZipLib</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(WXWIN)\lib\vc_lib;\dependencies</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(WXWIN)\lib\vc_lib;\macro_functions\wbenny-ziplib-176e4b6d51fc\Source\ZipLib;\dependencies</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -139,14 +155,14 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(WXWIN)\include;\dependencies;$(WXWIN)\include\msvc</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(WXWIN)\include;\dependencies;$(WXWIN)\include\msvc;\macro_functions\wbenny-ziplib-176e4b6d51fc\Source\ZipLib</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(WXWIN)\lib\vc_lib;\dependencies</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(WXWIN)\lib\vc_lib;\macro_functions\wbenny-ziplib-176e4b6d51fc\Source\ZipLib;\dependencies</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">

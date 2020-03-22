@@ -5,7 +5,8 @@
 #include <string>
 #include "wx/wx.h"
 #include "macro_functions/value_converter.h"
-
+//#include "macro_functions/cribdrag.h"
+#include "macro_functions/password_cracker.h"
 
 
 class cMain : public wxFrame

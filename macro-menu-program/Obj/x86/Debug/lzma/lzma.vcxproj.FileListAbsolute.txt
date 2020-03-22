@@ -1,0 +1,2 @@
+C:\Users\Coleman Cook\Documents\macro-wheel\macro-menu-program\Bin\x86\Debug\lzma.pdb
+C:\Users\Coleman Cook\Documents\macro-wheel\macro-menu-program\Obj\x86\Debug\lzma\lzma.pdb

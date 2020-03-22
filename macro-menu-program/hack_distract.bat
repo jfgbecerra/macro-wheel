@@ -1,4 +1,4 @@
-ECHO off
+ECHO OFF
 
 ECHO HACKING IN PROGRESS...
 timeout 1

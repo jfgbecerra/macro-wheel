@@ -153,16 +153,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="password_cracker.cpp" />
-    <ClCompile Include="Source.cpp" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\ZipLib\ZipLib.vcxproj">
       <Project>{5c9fd859-ddf9-4510-8397-b329b0ae8c48}</Project>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="password_cracker.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\..\..\archive.zip" />

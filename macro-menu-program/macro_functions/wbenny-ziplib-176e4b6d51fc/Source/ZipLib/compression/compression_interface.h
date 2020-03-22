@@ -1,6 +1,9 @@
 #pragma once
+#undef max
+#undef min
 #include <iostream>
 #include <algorithm>
+#include <limits>
 
 struct compression_properties_interface
 {

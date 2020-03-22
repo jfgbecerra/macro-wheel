@@ -1,0 +1,2 @@
+C:\Users\Coleman Cook\Documents\macro-wheel\macro-menu-program\Bin\x64\Debug\ZipLib.pdb
+C:\Users\Coleman Cook\Documents\macro-wheel\macro-menu-program\Obj\x64\Debug\ZipLib\ZipLib.pdb
