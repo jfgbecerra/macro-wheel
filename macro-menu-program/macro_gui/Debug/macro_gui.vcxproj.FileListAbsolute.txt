@@ -1,0 +1,4 @@
+C:\Users\Coleman Cook\Documents\macro-wheel\macro-menu-program\macro-menu\macro_gui\Debug\macro_gui.exe
+C:\Users\Coleman Cook\Documents\macro-wheel\macro-menu-program\macro-menu\macro_gui\Debug\macro_gui.pdb
+C:\Users\Coleman Cook\Documents\macro-wheel\macro-menu-program\macro_gui\Debug\macro_gui.exe
+C:\Users\Coleman Cook\Documents\macro-wheel\macro-menu-program\macro_gui\Debug\macro_gui.pdb
