@@ -1,4 +1,6 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include "cMain.h"
+
 
 wxBEGIN_EVENT_TABLE(cMain, wxFrame)
 
@@ -42,15 +44,33 @@ cMain::~cMain()
 
 void cMain::OnButtonClicked(wxCommandEvent& evt)
 {	// global handler for button presses in the macro grid.
+	wxString wx_inputStr_1;
+	wxString wx_inputStr_2;
+	wxString wx_inputStr_3;
 
+	std::string inputStr_1;
+	std::string inputStr_2;
+	std::string inputStr_3;
+	std::string outStr;
+	
 	int i = (evt.GetId() - 10000) % nFieldWidth;
 	int j = (evt.GetId() - 10000) / nFieldWidth;
 
 	switch(j * nFieldWidth + i)
 	{
 		case 0:	// case for the value converter
-			value_converter();
-			system("pause");
+			
+			wx_inputStr_1 = wxGetTextFromUser(_("Enter the input style of the number you want converted in lower case."), _("Value Coverter"), _(""), this, -1, -1, true);
+			wx_inputStr_2 = wxGetTextFromUser(_("Enter the output style of the number you want converted in lower case."), _("Value Coverter"), _(""), this, -1, -1, true);
+			wx_inputStr_3 = wxGetTextFromUser(_("Enter the value you want converted."), _("Value Coverter"), _(""), this, -1, -1, true);
+			
+			inputStr_1 = wx_inputStr_1.mb_str();
+			inputStr_2 = wx_inputStr_2.mb_str();
+			inputStr_3 = wx_inputStr_3.mb_str();
+
+			outStr = value_converter(inputStr_1, inputStr_2, inputStr_3);
+			wxMessageBox(outStr);
+
 			break;
 
 		case 7: // case for the distraction window hacker

@@ -30,6 +30,12 @@
     <ClCompile Include="macro_functions\value_converter.cpp">
       <Filter>Function Files</Filter>
     </ClCompile>
+    <ClCompile Include="get_image_metadata.cpp">
+      <Filter>Function Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cDlg_1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="cApp.h">
@@ -40,6 +46,15 @@
     </ClInclude>
     <ClInclude Include="macro_functions\value_converter.h">
       <Filter>Function Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="get_image_metadata.h">
+      <Filter>Function Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cDlg_1.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
