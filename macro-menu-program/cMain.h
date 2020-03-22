@@ -7,6 +7,8 @@
 #include "macro_functions/value_converter.h"
 //#include "macro_functions/cribdrag.h"
 #include "macro_functions/password_cracker.h"
+#include <wx/colour.h>
+#include <wx/palette.h>
 
 
 class cMain : public wxFrame

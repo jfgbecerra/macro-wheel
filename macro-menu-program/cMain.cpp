@@ -10,6 +10,8 @@
 #include <iomanip>  // std::setprecision
 
 
+
+
 using namespace std;
 
 wxBEGIN_EVENT_TABLE(cMain, wxFrame)
@@ -55,20 +57,32 @@ cMain::cMain() : wxFrame(nullptr, wxID_ANY, "The Hackro", wxPoint(30, 30) , wxSi
 		{
 			btn[j * nFieldWidth + i] = new wxButton(this, 10000 + (j * nFieldWidth + i));
 			grid->Add(btn[j * nFieldWidth + i], 1, wxEXPAND | wxALL);
+			grid->Add(btn[j * nFieldWidth + i], 1, wxEXPAND | wxALL);
 
 			btn[j * nFieldWidth + i]->Bind(wxEVT_COMMAND_BUTTON_CLICKED, &cMain::OnButtonClicked, this);
 		}
 	}
 
+
 	// *** Button labels are set here ***
 	btn[0]->SetLabel("Value Conversion Hacker");
+	btn[0]->SetBackgroundColour(wxColour(0, 204, 204, 256));
 	btn[1]->SetLabel("Image Metadata Hacker");
+	btn[1]->SetBackgroundColour(wxColour(0, 255, 255, 256));
 	btn[2]->SetLabel("Hack me to Tonga Time");
+	btn[2]->SetBackgroundColour(wxColour(51, 255, 255, 256));
 	btn[3]->SetLabel("Hack me to Alabama");
+	btn[3]->SetBackgroundColour(wxColour(0, 102, 204, 256));
 	btn[4]->SetLabel("Hack me a zip file");
+	btn[4]->SetBackgroundColour(wxColour(0, 128, 255, 256));
 	btn[5]->SetLabel("Multi-Pad Encryption Hacking");
+	btn[5]->SetBackgroundColour(wxColour(51, 123, 255, 256));
+
+	btn[6]->SetBackgroundColour(wxColour(0, 0, 204, 256));
 	btn[7]->SetLabel("Distraction Window Hacker");
-	btn[8]->SetLabel("Exit Hacker");
+	btn[7]->SetBackgroundColour(wxColour(0, 0, 255, 256));
+	btn[8]->SetLabel("Exit Hackro");
+	btn[8]->SetBackgroundColour(wxColour(51, 51, 255, 256));
 
 	this->SetSizer(grid);
 	grid->Layout();

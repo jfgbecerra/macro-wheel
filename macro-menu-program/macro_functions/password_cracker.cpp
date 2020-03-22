@@ -1,4 +1,6 @@
 #include "password_cracker.h"
+#include <fstream>
+#include <iostream>
 
 using namespace std;
 
@@ -23,6 +25,7 @@ void printAllKLengthRec(string set[], string prefix, int n, int k, ZipArchive::P
         // if the entry is password protected and the provided password is wrong
         // (or none is provided) the return value will be nullptr
         std::istream* decompressStream = entry->GetDecompressionStream();
+        cout << prefix;
 
         if (decompressStream != nullptr) {
             out = prefix;
@@ -48,12 +51,23 @@ void printAllKLengthRec(string set[], string prefix, int n, int k, ZipArchive::P
 
 std::string password_cracker(std::string file_path)
 {
+    using namespace std;
+
     string password;
-    string set[] = {"kill", "end", "sad", "live", "shoot", "me", "help", "die"};
+    string set[500];
+
+    ifstream inFile;
+    inFile.open("C:\\Users\\Coleman Cook\\Documents\\macro-wheel\\macro-menu-program\\macro_functions\\10-million-password-list-top-1000000.txt");
+   
+
+    for (long int j = 0; j < 500; j++)
+    {
+        inFile>>set[j];
+    }
 
     ZipArchive::Ptr archive = ZipFile::Open(file_path);
 
-    printAllKLengthRec(set, "", 8, 2, archive, password);
+    printAllKLengthRec(set, "", 500, 1, archive, password);
     
     return password;
 }
