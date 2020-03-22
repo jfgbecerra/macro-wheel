@@ -1,7 +1,7 @@
 #pragma once
 
 #include "get_image_metadata.h"
-#include "macro_functions/exiv2-0.27.2-Source/include/exiv2/exiv2.hpp"
+//#include "macro_functions/exiv2-0.27.2-Source/include/exiv2/exiv2.hpp"
 
 #include <string>
 #include <iostream>

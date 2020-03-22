@@ -1,6 +1,12 @@
 #pragma once
+
+#include <vector>
+#include <istream>
+#include <string>
 #include "wx/wx.h"
 #include "macro_functions/value_converter.h"
+
+
 
 class cMain : public wxFrame
 {
