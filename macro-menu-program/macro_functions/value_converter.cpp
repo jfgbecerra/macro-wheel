@@ -1,16 +1,17 @@
 // Driver script to call your functions that you want to run for macros this is a call for a python script 
 // You can make calls for other languages like this. 
-
 #pragma once
 #include <iostream>
 #include <cstdlib>
+// Driver script to call your functions that you want to run for macros this is a call for a python script 
+// You can make calls for other languages like this. 
 #include <unordered_map> 
 #include <string>
-#include "value_converter.h" 
+
 
 using namespace std;
 
-void createMap(unordered_map<string, char> *um)
+void createMap(unordered_map<string, char>* um)
 {
     (*um)["0000"] = '0';
     (*um)["0001"] = '1';
@@ -32,77 +33,84 @@ void createMap(unordered_map<string, char> *um)
 
 // function to convert 
 // Hexadecimal to Binary Number 
-void HexToBin(string hexdec)
+string HexToBin(string hexdec)
 {
     long int i = 0;
+    string value;
+    bool valid = true;
 
     while (hexdec[i]) {
 
         switch (hexdec[i]) {
         case '0':
-            cout << "0000";
+            value += "0000";
             break;
         case '1':
-            cout << "0001";
+            value += "0001";
             break;
         case '2':
-            cout << "0010";
+            value += "0010";
             break;
         case '3':
-            cout << "0011";
+            value += "0011";
             break;
         case '4':
-            cout << "0100";
+            value += "0100";
             break;
         case '5':
-            cout << "0101";
+            value += "0101";
             break;
         case '6':
-            cout << "0110";
+            value += "0110";
             break;
         case '7':
-            cout << "0111";
+            value += "0111";
             break;
         case '8':
-            cout << "1000";
+            value += "1000";
             break;
         case '9':
-            cout << "1001";
+            value += "1001";
             break;
         case 'A':
         case 'a':
-            cout << "1010";
+            value += "1010";
             break;
         case 'B':
         case 'b':
-            cout << "1011";
+            value += "1011";
             break;
         case 'C':
         case 'c':
-            cout << "1100";
+            value += "1100";
             break;
         case 'D':
         case 'd':
-            cout << "1101";
+            value += "1101";
             break;
         case 'E':
         case 'e':
-            cout << "1110";
+            value += "1110";
             break;
         case 'F':
         case 'f':
-            cout << "1111";
+            value += "1111";
             break;
         default:
-            cout << "\nInvalid hexadecimal digit "
-                << hexdec[i];
+            valid = false;
         }
         i++;
+    }
+    if (valid) {
+        return value;
+    }
+    else {
+        return "Invalid hex";
     }
 }
 
 // Input and output can be either decimal, binary, hex
-string value_converter(string input, string output,string value) 
+string value_converter(string input, string output, string value)
 {
     string choice;
     int i;
@@ -110,19 +118,17 @@ string value_converter(string input, string output,string value)
     char buffer[33];
 
     // Decimal to decimal
-    if(input == "decimal" && output == "decimal") {
+    if (input == "decimal" && output == "decimal") {
         return "Uh you alright?";
     }
-    // Decimal to hex
-    else if(input == "decimal", output == "binary") {
-        cout << "Enter the integer: ";
+    // Decimal to binary
+    else if (input == "decimal" && output == "binary") {
         i = stoi(value);
         _itoa_s(i, buffer, 2);
         return buffer;
     }
     // decimal to hex
-    else if (input == "decimal", output == "hex") {
-        cout << "Enter the integer: ";
+    else if (input == "decimal" && output == "hex") {
         i = stoi(value);
         _itoa_s(i, buffer, 16);
         return buffer;
@@ -213,9 +219,7 @@ string value_converter(string input, string output,string value)
     else if (input == "hex" && output == "binary") {
         // Convert HexaDecimal to Binary
         bin = value;
-
-        cout << "Binary value is: ";
-        HexToBin(bin);
+        return HexToBin(bin);
     }
     // Hex to decimal
     else if (input == "hex" && output == "decimal") {
