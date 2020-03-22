@@ -57,7 +57,6 @@ cMain::cMain() : wxFrame(nullptr, wxID_ANY, "The Hackro", wxPoint(30, 30) , wxSi
 		{
 			btn[j * nFieldWidth + i] = new wxButton(this, 10000 + (j * nFieldWidth + i));
 			grid->Add(btn[j * nFieldWidth + i], 1, wxEXPAND | wxALL);
-			grid->Add(btn[j * nFieldWidth + i], 1, wxEXPAND | wxALL);
 
 			btn[j * nFieldWidth + i]->Bind(wxEVT_COMMAND_BUTTON_CLICKED, &cMain::OnButtonClicked, this);
 		}
