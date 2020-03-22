@@ -101,49 +101,39 @@ void HexToBin(string hexdec)
     }
 }
 
-void value_converter() 
+// Input and output can be either decimal, binary, hex
+string value_converter(string input, string output,string value) 
 {
     string choice;
     int i;
     string bin;
     char buffer[33];
 
-    cout << "1: Convert Decimal to Decimal." << endl;
-    cout << "2: Convert Decimal to Binary." << endl;
-    cout << "3: Convert Decimal to Hex." << endl;
-    cout << "4: Convert Binary to Binary." << endl;
-    cout << "5: Convert Binary to Decimal." << endl;
-    cout << "6: Convert Binary to Hex." << endl;
-    cout << "7: Convert Hex to Hex." << endl;
-    cout << "8: Convert Hex to Binary." << endl;
-    cout << "9: Convert Hex to Decimal." << endl;
-    cout << "Please enter the number: ";
-    cin >> choice;
-    fflush(stdin);
-
-
-    if(choice == "1") {
-        cout << "Uh you alright?" << endl;
+    // Decimal to decimal
+    if(input == "decimal" && output == "decimal") {
+        return "Uh you alright?";
     }
-    else if(choice == "2") {
+    // Decimal to hex
+    else if(input == "decimal", output == "binary") {
         cout << "Enter the integer: ";
-        cin >> i;
+        i = stoi(value);
         _itoa_s(i, buffer, 2);
-        cout << "Hex value is: " << buffer << endl;
+        return buffer;
     }
-    else if (choice == "3") {
+    // decimal to hex
+    else if (input == "decimal", output == "hex") {
         cout << "Enter the integer: ";
-        cin >> i;
+        i = stoi(value);
         _itoa_s(i, buffer, 16);
-        cout << "Hex value is: " << buffer << endl;
+        return buffer;
     }
-    else if (choice == "4") {
-        cout << "Uh you alright?" << endl;
+    // Binary to binary
+    else if (input == "binary" && output == "binary") {
+        return "Uh you alright?";
     }
-    else if (choice == "5") {
-        cout << "Enter the binary number: ";
-        cin >> i;
-        int num = i;
+    // Binary to decimal
+    else if (input == "binary" && output == "decimal") {
+        int num = stoi(value);
         int dec_value = 0;
 
         // Initializing base value to 1, i.e 2^0 
@@ -159,11 +149,11 @@ void value_converter()
             base = base * 2;
         }
 
-        cout << "Decimal value is: " << dec_value << endl;
+        return to_string(dec_value);
     }
-    else if (choice == "6") {
-        cout << "Enter the binary number: ";
-        cin >> bin;
+    // Binary to hex
+    else if (input == "binary" && output == "hex") {
+        bin = value;
         int l = bin.size();
         int t = bin.find_first_of('.');
 
@@ -213,23 +203,24 @@ void value_converter()
             }
         }
 
-        cout << "Hex value is: " << hex << endl;
+        return hex;
     }
-    else if (choice == "7") {
-        cout << "Uh you alright?" << endl;
+    // Hex to hex
+    else if (input == "hex" && output == "hex") {
+        return "Uh you alright?";
     }
-    else if (choice == "8") {
+    // Hex to binary
+    else if (input == "hex" && output == "binary") {
         // Convert HexaDecimal to Binary
-        cout << "Enter the hex number: ";
-        cin >> bin;
+        bin = value;
 
         cout << "Binary value is: ";
         HexToBin(bin);
     }
-    else if (choice == "9") {
-        // Hex to binary
-        cout << "Enter the binary number: ";
-        cin >> bin;
+    // Hex to decimal
+    else if (input == "hex" && output == "decimal") {
+        // Hex to decimal
+        bin = value;
 
 
         int len = bin.size();
@@ -265,6 +256,6 @@ void value_converter()
             }
         }
 
-        cout << "Decimal value is: " << dec_val << endl;
+        return to_string(dec_val);
     }
 }
